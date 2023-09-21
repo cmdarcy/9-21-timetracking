@@ -1,7 +1,7 @@
 :root {
 /* ### Primary */
 --Blue: hsl(246, 80%, 60%);
---Lightred/* (work) */: hsl(15, 100%, 70%);
+--orange/* (work) */: hsl(15, 100%, 70%);
 --Softblue/* (play) */: hsl(195, 74%, 62%);
 --Lightred/* (study) */: hsl(348, 100%, 68%);
 --Limegreen/* (exercise) */: hsl(145, 58%, 55%);
@@ -28,13 +28,55 @@ body {
 }
 
 main, 
-section {
+section,
+.content-container {
     background-color: var(--Darkblue);
 }
 
 .rounded-container {
     border-radius: 20px;
 }
+
+section {
+    position: relative;
+    z-index: -1;
+}
+
+section > img {
+    position: absolute;
+    z-index: -1;
+    left: 35px;
+}
+
+.content-container {
+   margin-top: 2.5em;
+}
+
+.work-container {
+    background-color: var(--orange);
+}
+
+.play-container {
+    background-color: var(--Softblue);
+}
+
+.study-container {
+    background-color: var(--Lightred);
+}
+
+.exercise-container {
+    background-color: var(--Limegreen);
+}
+
+.social-container {
+    background-color: var(--Violet);
+}
+
+.selfcare-container {
+    background-color: var(--Softorange);
+}
+
+
 
 /* Footer */
 .attribution { font-size: 11px; text-align: center; }
