@@ -24,14 +24,23 @@ buttons.forEach((button) => {
 			show(dailyElements);
 			hide(weeklyElements);
 			hide(monthlyElements);
+			button.style.color = "White";
+			buttons[1].style.color = "var(--Desaturatedblue)";
+			buttons[2].style.color = "var(--Desaturatedblue)";
 		} else if (button.innerText === "Weekly") {
 			show(weeklyElements);
 			hide(dailyElements);
 			hide(monthlyElements);
+			button.style.color = "White";
+			buttons[0].style.color = "var(--Desaturatedblue)";
+			buttons[2].style.color = "var(--Desaturatedblue)";
 		} else {
 			show(monthlyElements);
 			hide(weeklyElements);
 			hide(dailyElements);
+			button.style.color = "White";
+			buttons[0].style.color = "var(--Desaturatedblue)";
+			buttons[1].style.color = "var(--Desaturatedblue)";
 		}
 	});
 });
