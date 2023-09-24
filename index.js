@@ -1,3 +1,28 @@
+async function getData(url) {
+	const response = await fetch(url);
+	return response.json();
+}
+
+const data = await getData("./data.json");
+
+let fullArray = [];
+for (let keys in data) {
+	fullArray.push(data[keys].timeframes.daily.current);
+	fullArray.push(data[keys].timeframes.daily.previous);
+	fullArray.push(data[keys].timeframes.weekly.current);
+	fullArray.push(data[keys].timeframes.weekly.previous);
+	fullArray.push(data[keys].timeframes.monthly.current);
+	fullArray.push(data[keys].timeframes.monthly.previous);
+}
+
+const stats = document.querySelectorAll(
+	"[data-daily], [data-weekly], [data-monthly]"
+);
+
+for (let i = 0; i < fullArray.length; i++) {
+	stats[i].innerText = stats[i].innerText + " " + fullArray[i] + "hrs";
+}
+
 const buttons = document
 	.querySelector(".button-container")
 	.querySelectorAll("p");
