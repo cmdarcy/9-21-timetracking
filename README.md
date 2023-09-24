@@ -53,10 +53,12 @@ Users should be able to:
 
 -   How to implement json data using `fetch()` and `async` `await` functions
 -   Utilizing css grid to design layout
+-   The concept of stacking context in relation to elements that have `position: absolute` or `position: relative`, as well as how `z-index` interacts with that
 
 ### Continued development
 
-I would like to incorporate more json data into future projects to increase my comfortability and efficiency with handling it
+-   I would like to incorporate more json data into future projects to increase my comfortability and efficiency with handling it
+-   I would like to experiment more with stacking context as I found the concept a little hard to fully grasp
 
 ## Author
 
